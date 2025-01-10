@@ -13,6 +13,7 @@ HTML – Structure of the web page
 CSS – Styling and layout
 JavaScript – Dynamic content handling
 REST Countries API – Fetching country data
+
 --How to Use 🖥️--
 Enter a country name in the search bar.
 Click the "Search" button to fetch data.
