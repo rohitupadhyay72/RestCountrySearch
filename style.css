@@ -1,0 +1,222 @@
+/* *{
+    margin: 0;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+}
+.center{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.first,.second{
+    width: 100%;
+    
+}
+.first{
+    height: 7%;
+}
+.first form{
+    width: 100%;
+}
+.first input{
+    width: 89%;
+    padding: 10px ;
+}
+.first button{
+    width: 10%;
+    padding: 10px;
+    background-color: navy;
+    color: white;
+    
+}
+
+.second{
+    height: 92%;
+    overflow: auto;
+    color:white;
+}
+.second::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    padding: 10px ;
+    background-color: grey;
+}
+.container:nth-child(odd){
+    background-color: dimgray;
+}
+.key,.value{
+    width:  42%;
+    font-size: 1.5rem;
+    
+}
+.gap{
+    height: 20px ;
+    background-color: navy;
+
+}
+.value a{
+    text-decoration: none;
+    color: white;
+    background-color: navy;
+    padding: 8px ;
+}
+.value img{
+    height: 100px ;
+    font-weight: 100px;
+    background-color: white; 
+    padding: 2px ;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.center {
+    width: 90%;
+    max-width: 9000px; /* Keeps the content centered on larger screens */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Search Bar */
+.first {
+width: 100%;  
+
+}
+
+.first input {
+    width: 88%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.first button {
+    width: 10%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    background-color: navy;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.first button:hover {
+    background-color: darkblue;
+}
+
+/* Country Information Display */
+.second {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: grey;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.container:nth-child(odd) {
+    background-color: dimgray;
+}
+
+.key,
+.value {
+    width: 48%;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+.gap {
+    height: 10px;
+    background-color: navy;
+}
+
+/* Image Styling */
+.value img {
+    max-width: 100px;
+    height: auto;
+    background-color: white;
+    padding: 2px;
+}
+
+/* Google Maps Link */
+.value a {
+    text-decoration: none;
+    color: white;
+    background-color: navy;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.value a:hover {
+    background-color: darkblue;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .center {
+        width: 95%;
+    }
+
+    .first {
+        flex-direction: column;
+    }
+
+    .first input,
+    .first button {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .key,
+    .value {
+        width: 100%;
+        text-align: center;
+    }
+
+    .value img {
+        max-width: 80px;
+    }
+}
