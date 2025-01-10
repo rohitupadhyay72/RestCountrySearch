@@ -27,6 +27,9 @@ function generate(key, value) {
         a.innerHTML='Click here to open Google Map'
         valueDiv.appendChild(a)
     }
+    else if (key=="Area"){
+        valueDiv.innerHTML=value+" sq. km"
+    }
     else if (value == true)
         valueDiv.innerHTML = "Yes"
     else if (value == false)
