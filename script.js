@@ -44,7 +44,7 @@ function getAPIData() {
     let input = document.getElementById('country')
     let country 
     if (input.value == "") {
-        alert("Please enter Country name to get details")
+        alert("Please enter a country to get details")
     }
     else {
         country = input.value
