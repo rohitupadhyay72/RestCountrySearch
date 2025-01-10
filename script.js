@@ -63,41 +63,29 @@ function getAPIData() {
         let data = JSON.parse(request.responseText)
         data.forEach(country => {
            generate("Official Name", country.name.official);
-    generate("Common Name", country.name.common);
+            generate("Common Name", country.name.common);
+            generate("Flag", country.flags.png);
+            generate("Nation Emblem", country.coatOfArms.png);
+            generate("Capital", country.capital);    
+            generate("Languages", Object.values(country.languages));
+            generate("Currency", Object.values(Object.values(country.currencies)[0]));
+            generate("Continent", country.continents);
+            generate("Region", country.region);
+            generate("Sub Region", country.subregion);
+            generate("Location", country.maps.googleMaps);
+            generate("Borders", country.borders);
+            generate("Area", country.area);
+            generate("Timezone", country.timezones);
+            generate("Start Of Week", country.startOfWeek);
+            generate("Independent", country.independent);
+            generate("UN Membership", country.unMember);
+            generate("Land Locked", country.landlocked);
+            generate("Population", country.population);
+            generate("Car Sign", country.car.signs);
+            generate("Driving Side", country.car.side);
+
     
-    // Geographic Information
-    generate("Continent", country.continents);
-    generate("Region", country.region);
-    generate("Sub Region", country.subregion);
-    generate("Location", country.maps.googleMaps);
-    generate("Borders", country.borders);
-    generate("Area", country.area);
-    generate("Timezone", country.timezones);
-    generate("Start Of Week", country.startOfWeek);
-
-    // Political & Administrative Information
-    generate("Capital", country.capital);
-    generate("Independent", country.independent);
-    generate("UN Membership", country.unMember);
-    generate("Land Locked", country.landlocked);
-
-    // Demographics
-    generate("Population", country.population);
-    generate("Languages", Object.values(country.languages));
-
-    // Economy & Currency
-    generate("Currency", Object.values(Object.values(country.currencies)[0]));
-
-    // Transportation
-    generate("Car Sign", country.car.signs);
-    generate("Driving Side", country.car.side);
-
-    // Symbols
-    generate("Flag", country.flags.png);
-    generate("Nation Emblem", country.coatOfArms.png);
-
-    // Fix duplicate key
-    generate("Timezone", country.timezones);
+    
 
             let gap = document.createElement("div")
             gap.classList.add('gap')
