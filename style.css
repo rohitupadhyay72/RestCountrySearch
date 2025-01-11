@@ -13,7 +13,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
+    background:url(2.jpg);
+    background-size: cover;  /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat
 }
 
 .center {
