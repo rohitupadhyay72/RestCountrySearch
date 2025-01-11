@@ -50,7 +50,7 @@ function getAPIData() {
         alert("Please enter a country to get details")
     }
     else {
-        country = input.value
+        country = input.value.trim()
     }
     let request = new XMLHttpRequest()
     request.open("get", "https://restcountries.com/v3.1/name/" + country)
@@ -63,6 +63,7 @@ function getAPIData() {
 
 
     request.addEventListener("load", () => {
+       if (request.status == 200){  
         let data = JSON.parse(request.responseText)
         data.forEach(country => {
            generate("Official Name", country.name.official);
@@ -94,6 +95,10 @@ function getAPIData() {
             gap.classList.add('gap')
             second.appendChild(gap)
         });
+    }
+    else{
+         alert("Incorrect county name or country not found. Please try again.")
+    }
     })
 }
 getAPIData()
