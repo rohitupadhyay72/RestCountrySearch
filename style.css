@@ -21,9 +21,8 @@ body {
 
 .center {
     width: 90%;
-    
     max-width: 9000px; /* Keeps the content centered on larger screens */
-    background-color: white;
+    background-color:  rgba(255, 255, 255, 0.416);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
