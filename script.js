@@ -45,13 +45,7 @@ function generate(key, value) {
 
 function getAPIData() {
     let input = document.getElementById('country')
-    let country 
-    if (input.value == "") {
-        alert("Please enter a country to get details")
-    }
-    else {
-        country = input.value.trim()
-    }
+    let country= input.value.trim()
     let request = new XMLHttpRequest()
     request.open("get", "https://restcountries.com/v3.1/name/" + country)
     request.send()
@@ -101,4 +95,3 @@ function getAPIData() {
     }
     })
 }
-getAPIData()
