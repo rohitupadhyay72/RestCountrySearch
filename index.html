@@ -10,7 +10,7 @@
     <div class="main">
         <div class="center">
             <div class="first">
-                <form onsubmit="getAPIData(); return false">
+                <form onsubmit="event.preventDefault(); getAPIData();">
                     <input type="search"  id="country" placeholder="Enter Country Name to get Information">
                     <button type="submit">Search</button>
                 </form>
